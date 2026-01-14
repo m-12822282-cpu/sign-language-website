@@ -15,3 +15,171 @@ body {
   font-family: "Inter", "Segoe UI", system-ui, sans-serif;
   background: radial-gradient(
     circle at top,
+    #f6f7ff 0%,
+    #eef1ff 40%,
+    #e6ebff 100%
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+}
+
+/* -------------------------
+   MAIN APP CARD
+-------------------------- */
+.container {
+  width: 100%;
+  max-width: 980px;
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(18px);
+  border-radius: 28px;
+  padding: 44px 40px 48px;
+  box-shadow:
+    0 30px 60px rgba(60, 72, 130, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  text-align: center;
+}
+
+/* -------------------------
+   TITLE
+-------------------------- */
+h1 {
+  font-size: 42px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  color: #1f2937;
+  margin-bottom: 8px;
+}
+
+h1 span {
+  color: #6366f1;
+}
+
+/* Subtitle */
+.subtitle {
+  font-size: 16px;
+  color: #6b7280;
+  margin-bottom: 34px;
+}
+
+/* -------------------------
+   INPUT AREA
+-------------------------- */
+input[type="text"] {
+  width: 100%;
+  max-width: 620px;
+  padding: 18px 20px;
+  font-size: 16px;
+  border-radius: 16px;
+  border: none;
+  background: #f9fafb;
+  box-shadow:
+    inset 0 0 0 1px #e5e7eb,
+    0 8px 20px rgba(0, 0, 0, 0.05);
+  outline: none;
+  transition: box-shadow 0.25s, background 0.25s;
+}
+
+input[type="text"]:focus {
+  background: #ffffff;
+  box-shadow:
+    inset 0 0 0 2px #6366f1,
+    0 10px 24px rgba(99, 102, 241, 0.2);
+}
+
+/* -------------------------
+   BUTTON
+-------------------------- */
+button {
+  margin-top: 22px;
+  padding: 16px 40px;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 999px;
+  border: none;
+  background: #6366f1;
+  color: #ffffff;
+  cursor: pointer;
+  box-shadow:
+    0 14px 28px rgba(99, 102, 241, 0.35);
+  transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  background: #4f46e5;
+  box-shadow:
+    0 20px 40px rgba(79, 70, 229, 0.4);
+}
+
+/* -------------------------
+   OUTPUT SECTION
+-------------------------- */
+#output {
+  margin-top: 48px;
+}
+
+/* Translation title */
+#output h3 {
+  font-size: 18px;
+  color: #374151;
+  margin-bottom: 28px;
+  font-weight: 600;
+}
+
+/* -------------------------
+   LETTER CARD
+-------------------------- */
+#output > div {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 96px;
+  padding: 14px 12px 12px;
+  margin: 12px;
+  border-radius: 20px;
+  background: #ffffff;
+  box-shadow:
+    0 12px 28px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+#output > div:hover {
+  transform: translateY(-6px);
+  box-shadow:
+    0 22px 40px rgba(0, 0, 0, 0.14);
+}
+
+/* Sign image */
+#output img {
+  width: 64px;
+  margin-bottom: 8px;
+}
+
+/* Letter label */
+#output div div {
+  font-size: 15px;
+  font-weight: 600;
+  color: #111827;
+}
+
+/* -------------------------
+   MOBILE
+-------------------------- */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 30px;
+  }
+
+  .container {
+    padding: 32px 22px;
+    border-radius: 22px;
+  }
+
+  #output > div {
+    width: 82px;
+    margin: 10px;
+  }
+}
